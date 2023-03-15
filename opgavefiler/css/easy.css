@@ -12,7 +12,15 @@ border-radius: 50px;
 }
 
 .pop:hover{
- 
+  animation: popUp 400ms forwards ease;
+}
+@keyframes popUp {
+  from{
+    transform: scale(100%);
+  }
+  to{
+    transform: scale(110%);
+  }
 }
 
 .popTwo{
@@ -25,9 +33,19 @@ border-radius: 50px;
 }
 
 .popTwo:hover{
-
+  animation: popUpDown 400ms ease;
 }
-
+@keyframes popUpDown {
+  0%{
+    transform: scale(100%);
+  }
+  50%{
+    transform: scale(120%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
 
 
 
@@ -41,7 +59,7 @@ border-radius: 50px;
 }
 
 .popThree:hover{
- 
+ animation: popUpDown infinite;
   animation-duration: 500ms;
   animation-timing-function: ease;
 

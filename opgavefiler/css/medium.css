@@ -9,21 +9,28 @@ border-radius: 50px;
 margin: 1rem;
 
 
-animation-duration: 400ms;
-animation-timing-function: ease-out;
-animation-fill-mode: both;
 
 }
-
-.animateLeft{
-  animation-name: goLeft;
+#ballOne.active{
+  animation: right 2s infinite alternate;
+  background-color: red;
 }
+
 
 .animateRight{
 
   animation-name: goRight;
 }
-
+@keyframes right {
+  from{
+    position: relative;
+    left: 0;
+  }
+  to{
+    position: relative;
+    left: 80%;
+  }
+}
 
 
 
@@ -38,11 +45,13 @@ text-align: center;
 border-radius: 50px;
 margin: 1rem;
 
-
 animation-duration: 400ms;
 animation-timing-function: ease-out;
 animation-fill-mode: both;
 
+}
+.balls.active{
+  animation: right 1s forwards;
 }
 
 .hardBalls{
@@ -54,13 +63,38 @@ text-align: center;
 border-radius: 50px;
 margin: 1rem;
 
-
 animation-duration: 400ms;
 animation-timing-function: ease-out;
 animation-fill-mode: both;
-
 }
-
+@keyframes anime {
+  0%{
+    position: relative;
+    left: 0%;
+  }
+  100%{
+    position: relative;
+    left: 75%;
+    transform: scale(0.25);
+  }
+}
+@keyframes animeReverse {
+  0%{
+    position: relative;
+    left: 75%;
+  }
+  100%{
+    position: relative;
+    left: 0%;
+    transform: scale(0.25);
+  }
+}
+.hardBalls.active:nth-child(even){
+  animation: anime 3s ease-out forwards alternate infinite;
+}
+.hardBalls.active:nth-child(odd){
+  animation: animeReverse 3s ease-out forwards alternate infinite;
+}
 
 
 
