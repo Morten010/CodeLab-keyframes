@@ -1,0 +1,53 @@
+/* opgave 1
+*/
+
+.pop{
+  background-color: red;
+color:antiquewhite;
+width: 100px;
+height: 100px;
+text-align: center;
+border-radius: 50px;
+
+}
+
+.pop:hover{
+ 
+}
+
+.popTwo{
+  background-color: rgb(241, 206, 7);
+color:antiquewhite;
+width: 100px;
+height: 100px;
+text-align: center;
+border-radius: 50px;
+}
+
+.popTwo:hover{
+
+}
+
+
+
+
+.popThree{
+  background-color: rgb(7, 90, 25);
+color:antiquewhite;
+width: 100px;
+height: 100px;
+text-align: center;
+border-radius: 50px;
+}
+
+.popThree:hover{
+ 
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+
+}
+
+
+
+
+

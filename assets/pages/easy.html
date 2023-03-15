@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> keyframes basics</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/assignmentPage.css">
+    <script src="../js/assignmentpage.js" defer></script>
+
+    <link rel="stylesheet" href="../../opgavefiler/css/easy.css">
+    <script src="../../opgavefiler/js/firstPage.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="assignmentTopSection">
+            <h1>CSS animation og @keyframes</h1>
+            <nav>
+                <a href="../../index.html">back</a>
+            </nav>
+            <br>
+            <p>CSS Animation med keyframes er afhængig af følgende keywords:.</p>
+            <br>
+
+            <ul>
+                <li><code class="w3-codespan">@keyframes</code> - Navngivet sæt af instruktioner der estemmer animation.</li>
+                <li><code class="w3-codespan">animation-name</code>  - Definerer navnet på den @keyframes samling du vil animere igennem.</li>
+                <li><code class="w3-codespan">animation-duration</code> - Definerer hvor lang tid din animation tager.</li>
+                  <li><code class="w3-codespan">animation-delay</code> - Definerer hvor lang tid der skal gå før din animation starter</li>
+                  <li><code class="w3-codespan">animation-iteration-count</code> - Definerer hvor mange gange din animation skal gentage sig.</li>
+                  <li><code class="w3-codespan">animation-direction</code> - Definer hvilken vej din animation skal afspilles.</li>
+                  <li><code class="w3-codespan">animation-timing-function</code> - Samme funktion som på transitions eks. ease</li>
+                  <li><code class="w3-codespan">animation-fill-mode</code> - hvordan skal det animerede element opføre sig efter animationen er stoppet.</li>
+                  <li><code class="w3-codespan">animation</code> - shorthand keyword til at definere alle de ovenstående på en linje.</li>
+                </ul>
+
+
+            <strong>
+              
+                <p>CSS skal skrives i filen: /opgavefiler/css/easy.css </p>
+            </strong>
+
+
+    </header>
+    </section>
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 1</h2>
+            <p>
+                
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                    Opret en @keyframes samling med navn popUp. der skalerer et element op til 110%
+                </li>
+                <li>
+                  tilføj animation properties til den class der hedder .pop:hover så elementet animerer en gang gennem din @keyframes sæt. på 400ms, med ease.
+                </li>
+                <li>
+                    Din animation skal forblive skaleret op. Sålænge musen er over, og så snappe tilbage når musen flyttes.
+                  </li>
+            </ol>
+            
+            <h3>Hover her</h3>
+
+           
+
+                <div class="pop"></div>
+
+           
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+                    .pop:hover{
+                        animation-name: popUp;
+                        animation-duration: 500ms;
+                        animation-fill-mode:both;
+                        animation-timing-function: ease;
+                      }
+                      
+                      @keyframes popUp {
+                        from {transform: scale(100%)}
+                        to {transform: scale(120%)}
+                      }
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 2</h2>
+            <p>
+                
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                    lav en ny  @keyframes samling med navn popUpDown. der skalerer op til 120% og dernæst ned til 100% igen.
+                </li>
+
+<li>
+                  tilføj animation properties til den class der hedder .popTwo:hover så elementet animerer en gang gennem din @keyframes sæt. på 400ms, med ease.
+                </li>
+               
+               
+            </ol>
+            
+            <h3>Hover her</h3>
+
+           
+
+                <div class="popTwo"></div>
+
+           
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+                    @keyframes popUpDown {
+                        0% {transform: scale(100%)}
+                        50% {transform: scale(120%)}
+                        100% {transform: scale(100%)}
+                      }
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 3</h2>
+            <p>
+                
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                   få animationen på .popThree til at gentage sig så længe musen er over elementet.
+                </li>
+
+                <li>
+                    brug @keyframes sæt popUpDown.
+                </li>
+               
+            </ol>
+            
+            <h3>Hover her</h3>
+
+          
+
+                <div class="popThree"></div>
+
+            
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+                    animation-iteration-count:
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+
+
+    <footer>
+        <nav>
+            <a href="../../index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

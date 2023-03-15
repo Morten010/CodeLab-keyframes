@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS keyframes medium</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/assignmentPage.css">
+    <script src="../js/assignmentpage.js" defer></script>
+
+    <link rel="stylesheet" href="../../opgavefiler/css/medium.css">
+    <script src="../../opgavefiler/js/medium.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="assignmentTopSection">
+            <h1>keyframe animation og JavaScript</h1>
+            <nav>
+                <a href="../../index.html">back</a>
+            </nav>
+            <br>
+            <p>Her er opgaver med Animation og JavaScript. Man bruger typisk et event eks. click eller loaded til at triggere en animation.</p>
+            <br>
+
+            <strong>
+                <p>JavaScript skal skrives i filen: /opgavefiler/js/medium.js </p>
+                <p>evt. CSS skal skrives i filen: /opgavefiler/css/medium.css </p>
+            </strong>
+
+
+    </header>
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 1</h2>
+            <p>
+               Du skal her bruge en eventlistner på en button til at starte animation på et andet objekt. <br>
+               Når du trykker på BØH! skal den grønne kugle animere til højre, væk fra knappen, og ease til stop.
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                    Opret classes og keyframe sets der kan kontrolere din animation. test evt med hover før du skriver JS.
+                </li>
+                <li>
+                    tilføj en event listner til knappen med id "buhOneButton", der kan toggle din animations klasse ind på elementet med id "ballOne".
+                </li>
+            </ol>
+           
+
+            <h3>resultat her</h3>
+            
+            <button id="buhOneButton">BØH!</button>
+            <div id="ballOne"></div>
+            
+
+
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+            JS hint:
+                myBuhButton.addEventListener('click',()=>{
+                myBall.classList.toggle('animateRight');
+                });
+
+            CSS hint:
+                .animateRight{
+                animation-name: goRight;
+                }
+
+
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="medium"></header>
+        <article>
+            <h2>Opgave 2</h2>
+            <p>
+               Du skal her bruge en eventlistner på en button til at starte animation på flere objekter. <br>
+               Når du trykker på BØH! skal de gule kugler animere til højre, væk fra knappen, og ease til stop.
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                    Opret classes og keyframe sets der kan kontrolere din animation. test evt med hover før du skriver JS.
+                </li>
+                <li>
+                    tilføj en event listner til knappen med id "buhTwoButton", der kan toggle din animations klasse ind på dine elementer med class "balls".
+                </li>
+            </ol>
+           
+
+            <h3>resultat her</h3>
+            
+            <button id="buhTwoButton">BØH!</button>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            <div class="balls"></div>
+            
+
+
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+            JS hint:
+            // i event listner
+            for (const myBall  of myBalls) {
+                myBall.classList.toggle('animateRight');
+            };
+
+            CSS hint:
+                .animateRight{
+                animation-name: goLeft;
+                }
+
+
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+    <section class="assignmentArea">
+        <header class="hard"></header>
+        <article>
+            <h2>Opgave 3</h2>
+            <p>
+               Du skal her bruge en eventlistner på en button til at starte animation på flere objekter. <br>
+               Når du trykker på BØH! skal de røde kugler animere skiftevis til højre og til venstre, væk fra knappen, og ease til stop.
+            </p>
+            <h3>Instruktioner</h3>
+            <ol>
+                <li>
+                    Opret classes og keyframe sets der kan kontrolere din animation. test evt med hover før du skriver JS.
+                </li>
+                <li>
+                    tilføj en event listner til knappen med id "buhThreeButton", der kan toggle din animations klasser ind på dine elementer med class "hardBalls".
+                </li>
+            </ol>
+           
+
+            <h3>resultat her</h3>
+            
+            <button id="buhThreeButton">BØH!</button>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            <div class="hardBalls"></div>
+            
+
+
+
+            <br>
+            <button class="hintbutton">Hint</button>
+            <div class="hint">
+
+                <pre><code>
+            JS hint:
+            // i event listner brug en global variabel til at holde styr på
+            om det er til højre eller venstre du skal toggle på classlist
+            
+
+            CSS hint:
+                @keyframes goRight{
+                from {transform: translateX(0px)}
+                to {transform: translateX(500px)}
+                }
+              
+                 @keyframes goLeft{
+                from {transform: translateX(0px)}
+                to {transform: translateX(-500px)}
+                }
+
+
+    </code></pre>
+            </div>
+        </article>
+
+
+
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h2>Opgave 4</h2>
+            <p>
+               Du skal her tilføje scale til dine animationer, så de røde bolde bliver skaleret ned til 25%. sammen med flytningen <br>
+               Og så skal de animere frem og tilbage uendeligt.
+            </p>
+           
+           
+
+        </article>
+
+
+
+    </section>
+
+
+    <footer>
+        <nav>
+            <a href="../../index.html">back</a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>
